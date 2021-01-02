@@ -4,16 +4,8 @@ import Post from "./Post.js";
 class Posts extends Component {
   constructor(props) {
     super(props);
-    this.state = { posts: [], routeChanged: false };
+    this.state = { posts: [] };
   }
-
-  //   componentWillReceiveProps(nextProps) {
-  //     const routeChanged = nextProps.location !== this.props.location;
-  //     if (routeChanged) {
-  //       this.id = this.resolveId(nextProps.location);
-  //       this.fetchData();
-  //     }
-  //   }
 
   resolveId(location) {
     return parseInt(location.pathname.split("/").pop());

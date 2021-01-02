@@ -139,8 +139,33 @@
   color: #555;
   background: #ccc;
 }
+.article-catalog {
+  float: left;
+  margin-left: 50px;
+  margin-top: 50px;
+  padding: 15px;
+  border-right: 1px solid #e5e5e5;
+}
+.article-catalog-h1 {
+  font-weight: bold;
+}
+.article-catalog-h2 {
+  margin-left: 1em;
+}
+.article-catalog-h3 {
+  margin-left: 2em;
+}
+.article-catalog-h4 {
+  margin-left: 3em;
+}
+.article-catalog-h5 {
+  margin-left: 4em;
+}
+.article-catalog-h6 {
+  margin-left: 5em;
+}
 
-#gotop {
+#gotop-btn {
   position: fixed;
   left: 50%;
   margin-left: 380px;

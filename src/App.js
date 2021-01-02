@@ -3,10 +3,12 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import "./css/fonts.css";
 import "./css/index.css";
 import "./css/list.css";
+import "./css/post.css";
 import "./css/reset.css";
 import About from "./view/About.js";
 import PostContent from "./view/PostContent.js";
 import Posts from "./view/Posts.js";
+
 export default class App extends Component {
   render() {
     return (
@@ -25,5 +27,3 @@ export default class App extends Component {
     );
   }
 }
-
-// export default withRouter((App));
