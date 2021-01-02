@@ -1,3 +1,4 @@
+import NProgress from "nprogress";
 import React, { Component } from "react";
 import Post from "./Post.js";
 
@@ -34,7 +35,9 @@ class Posts extends Component {
 
   componentDidMount() {
     this.id = this.resolveId(this.props.location);
+    NProgress.start();
     this.fetchData();
+    NProgress.done();
   }
 
   render() {

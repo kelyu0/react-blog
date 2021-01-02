@@ -1,5 +1,6 @@
 import hljs from "highlight.js";
 import marked from "marked";
+import NProgress from "nprogress";
 import React, { Component } from "react";
 import "../css/zenburn.css";
 
@@ -19,12 +20,14 @@ class PostContent extends Component {
       highlight: (code) => hljs.highlightAuto(code).value,
     });
 
+    NProgress.start();
     fetch(`https://api.github.com/repos/kelyu0/articles/issues/${id}`)
       .then((resp) => resp.json())
       .then((issue) => {
         const content = this.renderContent(issue);
         this.setState({ content: content });
       });
+    NProgress.done();
   }
 
   renderContent(issue) {

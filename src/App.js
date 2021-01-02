@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route } from "react-router-dom";
 import "./css/fonts.css";
 import "./css/index.css";
 import "./css/list.css";
+import "./css/nprogress.css";
 import "./css/post.css";
 import "./css/reset.css";
 import About from "./view/About.js";
