@@ -27,8 +27,8 @@
   margin-bottom: 16px;
 }
 
-.article-content p code,
-.article-content ul code {
+.article-content p code
+/* .article-content ul code */ {
   display: inline-block;
   margin: 0 2px;
   padding: 0 4px;
@@ -44,6 +44,7 @@
   overflow-x: auto;
   padding: 0.5em;
   background: #3f3f3f;
+  /* background: #f6f8fa; */
   color: #dcdcdc;
   margin-bottom: 16px;
   padding: 10px 15px;

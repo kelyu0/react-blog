@@ -1,8 +1,8 @@
 import hljs from "highlight.js";
+import "highlight.js/styles/zenburn.css";
 import marked from "marked";
 import NProgress from "nprogress";
 import React, { Component } from "react";
-import "../css/zenburn.css";
 
 class PostContent extends Component {
   constructor(props) {
@@ -61,7 +61,7 @@ class PostContent extends Component {
         <a href="#top" id="gotop-btn">
           Up
         </a>
-        <div className="article">
+        <div className="article ">
           <h1 className="article-title">{issue.title}</h1>
           <p className="article-time">{issue.created_at.substr(0, 10)}</p>
           <div className="article-desc article-content" dangerouslySetInnerHTML={{ __html: htmlContent }} />
