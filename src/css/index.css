@@ -29,7 +29,7 @@ a:hover {
   height: 2px;
 }
 
-@media only screen and (-o-min-device-pixel-ratio: 3/2),
+/* @media only screen and (-o-min-device-pixel-ratio: 3/2),
   only screen and (min--moz-device-pixel-ratio: 1.5),
   only screen and (-webkit-min-device-pixel-ratio: 1.5),
   only screen and (min-resolution: 240dpi),
@@ -38,4 +38,4 @@ a:hover {
     color: #44a340;
     background: none;
   }
-}
+} */
