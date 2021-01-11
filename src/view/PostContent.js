@@ -3,6 +3,7 @@ import "highlight.js/styles/zenburn.css";
 import marked from "marked";
 import NProgress from "nprogress";
 import React, { Component } from "react";
+import { config } from "../config";
 import Catalog from "./Catalog";
 
 class PostContent extends Component {
@@ -22,7 +23,8 @@ class PostContent extends Component {
     });
 
     NProgress.start();
-    fetch(`https://api.github.com/repos/kelyu0/articles/issues/${id}`)
+    const url = `https://api.github.com/repos/${config.githubUserName}/${config.githubRepo}/issues/${id}`;
+    fetch(url)
       .then((resp) => resp.json())
       .then((issue) => {
         const content = this.renderContent(issue);

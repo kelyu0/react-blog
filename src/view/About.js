@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { config } from "../config";
 class About extends Component {
   render() {
     return (
@@ -6,16 +7,11 @@ class About extends Component {
         <div>Contact me from :</div>
         <br />
         <ul>
-          <li>
-            <a href="mailto:kelyu0109@gmail.com"> kelyu0109@gmail.com </a>
-          </li>
-
-          <li>
-            <a href="https://github.com/kelyu0">GitHub</a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ke-lyu-638bb8141/"> Linkedin </a>
-          </li>
+          {config.thirdPartySite.map((site) => (
+            <li>
+              <a href={site.href}>{site.title}</a>
+            </li>
+          ))}
         </ul>
       </div>
     );

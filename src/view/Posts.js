@@ -1,7 +1,7 @@
 import NProgress from "nprogress";
 import React, { Component } from "react";
+import { config } from "../config";
 import Post from "./Post.js";
-
 class Posts extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +13,8 @@ class Posts extends Component {
   }
 
   fetchData() {
-    fetch("https://api.github.com/repos/kelyu0/articles/issues")
+    const url = `https://api.github.com/repos/${config.githubUserName}/${config.githubRepo}/issues`;
+    fetch(url)
       .then((resp) => {
         return resp.json();
       })
