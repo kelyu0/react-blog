@@ -11,11 +11,53 @@
 - Get issues by `Github api` - [My articles repo](https://github.com/kelyu0/articles/issues)
 - Deploy with `Github pages` - [My github.io repo](https://github.com/kelyu0/kelyu0.github.io)
 
-## 🚀 Available Scripts
+## 🔥 Features
 
-- `npm start`\
-  Runs the app in the development mode.\
-  Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- Syntax/Code Highlighting
+- Article anchor navigation
+- Responsive
+- Back to the top
+- Jump to github comments
 
-- `npm run build`\
-  Builds the app for production to the `build` folder.
+## 🌱 Minimalist
+
+Minimalist page, minimal code. Use the most streamlined code to achieve the most needed functions.
+
+- 3 Pages：Issue list, Issue content, About
+- 5 个 Files：Posts.js, Post.js, PostContent.js, About.js, Catalog.js
+
+## 🚀 Usage
+
+### Local preview
+
+```
+  git clone git@github.com:kelyu0/react-issue-blog.git
+  cd react-issue-blog
+  npm install
+  npm run start
+```
+
+Open http://localhost:3000 to view it in the browser.
+
+### Customize
+
+Change the content in src/config.js and customize it as your blog.
+
+    export const config = {
+      // Your Github UserName
+      githubUserName: "kelyu0",
+      // Your Github Repo Name Where You Have your issues as Blog
+      githubRepo: "articles",
+      // About Page links
+      thirdPartySite: [
+        {
+          href: "https://github.com/kelyu0",
+          title: "GitHub",
+        },
+        //Other sites ...
+      ],
+    };
+
+### build
+
+    npm run build  # Compiles and minifies for production
