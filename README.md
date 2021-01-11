@@ -24,7 +24,7 @@
 Minimalist page, minimal code. Use the most streamlined code to achieve the most needed functions.
 
 - 3 Pages：Issue list, Issue content, About
-- 5 个 Files：Posts.js, Post.js, PostContent.js, About.js, Catalog.js
+- 5 Files：Posts.js, Post.js, PostContent.js, About.js, Catalog.js
 
 ## 🚀 Usage
 
