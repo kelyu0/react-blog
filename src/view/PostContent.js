@@ -33,12 +33,30 @@ class PostContent extends Component {
     NProgress.done();
   }
 
-  renderContent(issue) {
+  handleAnchor(issue) {
     let htmlContent = marked(issue.body);
 
+    //匹配目录
+    const toc = issue.body.match(/#{1,6}\s(.+)/g);
+    const tables = toc.map((item) => ({
+      level: item.split("#").length - 1,
+      title: item.replace(/#{1,6}/, "").trim(),
+    }));
+
+    //给html中的h加id
+    let tocHtml = htmlContent.match(/<(h\d).*?>.*?<\/h\d>/g);
+    tocHtml.forEach((item, index) => {
+      let _toc = `<div id='${tables[index].title}'>${item} </div>`;
+      htmlContent = htmlContent.replace(item, _toc);
+    });
+    return { htmlContent, tables };
+  }
+
+  renderContent(issue) {
+    const { htmlContent, tables } = this.handleAnchor(issue);
     return (
       <div className="content-layout">
-        <Catalog mdContent={issue.body} htmlContent={htmlContent}></Catalog>
+        <Catalog tables={tables}></Catalog>
         <div className="main-container">
           <a href="#top" id="gotop-btn">
             Up
@@ -47,7 +65,7 @@ class PostContent extends Component {
             <article className="article ">
               <h1 className="article-title">{issue.title}</h1>
               <p className="article-time">{issue.created_at.substr(0, 10)}</p>
-              <div className="article-desc article-content" dangerouslySetInnerHTML={{ __html: marked(issue.body) }} />
+              <div className="article-desc article-content" dangerouslySetInnerHTML={{ __html: htmlContent }} />
             </article>
             <div className="article">
               <button className="article-comment" onClick={() => (window.location.href = issue.html_url)}>
