@@ -7,8 +7,8 @@ class About extends Component {
         <div>Contact me from :</div>
         <br />
         <ul>
-          {config.thirdPartySite.map((site) => (
-            <li>
+          {config.thirdPartySite.map((site, index) => (
+            <li key={index}>
               <a href={site.href}>{site.title}</a>
             </li>
           ))}

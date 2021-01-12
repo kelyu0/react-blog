@@ -1,4 +1,24 @@
-body,div,dl,dt,dd,ul,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
   margin: 0;
   padding: 0;
 }
@@ -8,11 +28,20 @@ table {
   border-collapse: collapse;
 }
 
-fieldset,img {
+fieldset,
+img {
   border: 0;
 }
 
-address,caption,cite,code,dfn,em,strong,th,var {
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
   font-weight: normal;
   font-style: normal;
 }
@@ -20,22 +49,33 @@ address,caption,cite,code,dfn,em,strong,th,var {
 a {
   text-decoration: none;
 }
+li {
+  list-style: none;
+}
 
-caption,th {
+caption,
+th {
   text-align: left;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: normal;
   font-size: 100%;
 }
 
-q:before,q:after {
-  content:'';
+q:before,
+q:after {
+  content: "";
 }
 
-abbr,acronym {
-  border:0;
+abbr,
+acronym {
+  border: 0;
 }
 
 legend {

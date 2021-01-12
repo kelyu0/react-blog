@@ -12,9 +12,11 @@ class Post extends Component {
     let path = "/posts/" + post.id;
     return (
       <li className="list-post">
-        <Link to={{ pathname: path }}>{post.title}</Link>
-        {labels}
+        <div>
+          <Link to={{ pathname: path }}>{post.title}</Link>
+        </div>
         <span className="date-long">{post.date}</span>
+        {labels}
       </li>
     );
   }

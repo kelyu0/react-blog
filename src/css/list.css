@@ -31,7 +31,7 @@
 
 .list-post span {
   color: #999;
-  text-align: right;
+  /* text-align: right; */
 }
 
 .list-label {
@@ -47,8 +47,15 @@
   float: right;
 }
 
-.list-post a {
-  text-decoration: none;
+.list-post div {
+  /* font-size: 1px; */
+  line-height: 1;
+  display: inline-block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 450px;
+  color: #44a340;
 }
 
 @media only screen and (-o-min-device-pixel-ratio: 3/2),
