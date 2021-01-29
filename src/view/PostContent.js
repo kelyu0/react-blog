@@ -15,7 +15,7 @@ class PostContent extends Component {
   }
 
   componentDidMount() {
-    const path = window.location.pathname;
+    const path = window.location.href;
     const id = path.split("/").pop();
 
     marked.setOptions({
@@ -47,6 +47,8 @@ class PostContent extends Component {
     let tocHtml = htmlContent.match(/<(h\d).*?>.*?<\/h\d>/g);
     tocHtml.forEach((item, index) => {
       let _toc = `<div id='${tables[index].title}'>${item} </div>`;
+      // let _toc = item.replace(/".*"/g, `"${tables[index].title}"`);
+      // _toc = _toc.replace(/>.*</g, `><a herf='#${tables[index].title}'> ${tables[index].title} </a><`);
       htmlContent = htmlContent.replace(item, _toc);
     });
     return { htmlContent, tables };
