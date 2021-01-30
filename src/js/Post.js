@@ -9,7 +9,7 @@ class Post extends Component {
         {label}
       </span>
     ));
-    let path = "/posts/" + post.id;
+    let path = "/post/" + post.id;
     return (
       <li className="list-post">
         <div>

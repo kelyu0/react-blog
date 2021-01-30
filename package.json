@@ -2,6 +2,7 @@
   "name": "react-issue-blog",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kelyu0.github.io/react-issue-blog",
   "dependencies": {
     "highlight.js": "^10.5.0",
     "marked": "^1.2.7",
@@ -31,5 +32,6 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "devDependencies": {}
 }
